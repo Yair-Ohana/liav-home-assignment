@@ -33,7 +33,7 @@ h1 {
 }
 
 .week-movie-list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: start;
   gap: 40px;
