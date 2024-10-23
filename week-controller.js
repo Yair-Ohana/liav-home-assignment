@@ -1,3 +1,5 @@
+import { displaySingleMovie } from "./single-movie-utils.js";
+
 const popularMoviesWeekUrl =
   "https://api.themoviedb.org/3/trending/movie/week?language=en-US";
 
@@ -21,6 +23,9 @@ fetch(popularMoviesWeekUrl, options)
       <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
       <h2>${movie.title}</h2>
     `;
+      movieElement.addEventListener("click", () => {
+        displaySingleMovie(movie.id);
+      });
       movieList.appendChild(movieElement);
     })
   )
