@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Movies</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Popular Movies</h1>
+    <div>
+      <p>Select view:</p>
+      <ul id="view-select" class="dropdown">
+        <li data-value="day">Popular of the Day</li>
+        <li data-value="week">Popular of the Week</li>
+      </ul>
+    </div>
+    <div class="movie-list"></div>
+
+    <script type="module">
+      import "./day-controller.js";
+      import "./week-controller.js";
+    </script>
+  </body>
+</html>
