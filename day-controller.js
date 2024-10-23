@@ -10,7 +10,7 @@ const options = {
   },
 };
 
-const movieList = document.getElementsByClassName("movie-list")[0];
+const movieList = document.getElementsByClassName("day-movie-list")[0];
 fetch(popularMoviesDayUrl, options)
   .then((response) => response.json())
   .then((response) =>
