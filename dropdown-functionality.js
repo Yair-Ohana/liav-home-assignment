@@ -12,3 +12,4 @@ viewSelect.addEventListener("change", function () {
     weekMovieList.style.display = "flex";
   }
 });
+

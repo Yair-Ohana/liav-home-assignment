@@ -7,14 +7,25 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Popular Movies</h1>
-    <div>
-      <p>Select view:</p>
-      <select id="view-select">
-        <option selected value="day">Popular of the Day</option>
-        <option value="week">Popular of the Week</option>
-      </select>
-    </div>
+    <h1>TMDB</h1>
+
+    <!-- תפריט ניווט -->
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+      <div class="select-view">
+        <p>Select view:</p>
+        <select id="view-select">
+          <option selected value="day">Popular of the Day</option>
+          <option value="week">Popugilar of the Week</option>
+        </select>
+      </div>
+    </nav>
+
     <div class="day-movie-list"></div>
     <div class="week-movie-list"></div>
 
