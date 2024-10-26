@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TMDB project</title>
+    <title>TMDB Project</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="stylesheet" href="search-page.css">
+</head>
   <body>
     <h1>TMDB</h1>
 
@@ -20,10 +21,22 @@
         <p>Select view:</p>
         <select id="view-select">
           <option selected value="day">Popular of the Day</option>
-          <option value="week">Popugilar of the Week</option>
+          <option value="week">Popular of the Week</option>
         </select>
       </div>
     </nav>
+
+    <!-- Content area for dynamic loading -->
+    <div id="content">
+      <!-- Search Form added here -->
+      <form id="search-form">
+        <input name="search-bar" type="text" id="search-input" placeholder="Enter movie name..." />
+        <button type="submit">Search</button>
+      </form>
+      <div id="search-results"></div>
+    </div>
+
+    <div class="search-output"></div>
 
     <div class="day-movie-list"></div>
     <div class="week-movie-list"></div>

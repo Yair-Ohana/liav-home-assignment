@@ -1,0 +1,5 @@
+/* <div class="day-movie-list"></div> */
+/* <div class="week-movie-list"></div> */
+.week-movie-list , .day-movie-list {
+    display: none;
+}

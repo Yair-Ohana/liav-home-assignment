@@ -10,7 +10,6 @@ export function displaySingleMovie(movieId) {
   const singleMovieUrl = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;
   const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US`;
 
-  // Hide all existing content
   document.body.innerHTML = "";
   const singleMovieElement = document.createElement("div");
   singleMovieElement.classList.add("single-movie");
@@ -90,10 +89,13 @@ export function displaySingleMovie(movieId) {
     });
 }
 
-// single-movie.js
-// const urlParams = new URLSearchParams(window.location.search);
-// const movieId = urlParams.get('movieId');
 
-// if (movieId) {
-//   displaySingleMovie(movieId); // Call your function to fetch and display the movie
-// }
+
+
+
+
+
+
+
+
+
