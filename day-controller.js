@@ -1,3 +1,4 @@
+import { addToFavorites } from "./utils.js";
 import { displaySingleMovie } from "./single-movie-utils.js";
 
 const popularMoviesDayUrl =
@@ -22,7 +23,13 @@ fetch(popularMoviesDayUrl, options)
       movieElement.innerHTML = `
       <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
       <h2>${movie.title}</h2>
+      <span class="favorite-icon" data-id="${movie.id}">❤️</span>
     `;
+      const favoriteIcon = movieElement.querySelector(".favorite-icon");
+      favoriteIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        addToFavorites(movie.id, movie.title, movie.poster_path);
+      });
       movieElement.addEventListener("click", () => {
         displaySingleMovie(movie.id);
       });
