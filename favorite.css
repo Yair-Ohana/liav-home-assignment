@@ -1,15 +1,13 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222831; /* Dark background color */
-    color: #00FFF5; /* Light text color */
+    background-color: #222831;
+    color: #00FFF5;
   }
   
   .nav-bar {
-    background-color: #393E46; /* Dark background for the navigation */
+    background-color: #393E46;
     padding: 10px;
   }
   
@@ -19,60 +17,59 @@ body {
   }
   
   .nav-links li {
-    display: inline; /* Display links inline */
-    margin-right: 20px; /* Space between links */
+    display: inline;
+    margin-right: 20px;
   }
   
   .nav-links a {
-    color: #00ADB5; /* Light teal text for links */
-    text-decoration: none; /* No underline */
+    color: #00ADB5;
+    text-decoration: none;
   }
   
   h1 {
-    text-align: center; /* Center the header */
-    margin-top: 20px; /* Margin above the header */
-    color: #00FFF5; /* Light text color for header */
+    text-align: center;
+    margin-top: 20px;
+    color: #00FFF5;
   }
   
-  /* Favorites list grid */
   .favorites-list {
-    display: grid; /* Enable grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid columns */
-    gap: 20px; /* Space between grid items */
-    padding: 20px; /* Padding around the grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
   }
   
   .movie-item {
-    background-color: #393E46; /* Darker background for movie items */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center; /* Center text inside movie items */
+    background-color: #393E46;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
   }
   
   .movie-item img {
-    width: 100%; /* Image takes full width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px 8px 0 0; /* Rounded top corners for images */
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
   }
   
   .movie-item h2 {
-    font-size: 1.2em; /* Slightly larger title */
-    margin: 10px 0; /* Margin above and below title */
-    color: #00FFF5; /* Light text color for movie title */
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #00FFF5;
   }
   
   .remove-favorite {
-    background-color: #00ADB5; /* Teal background for remove button */
-    color: white; /* White text for button */
-    border: none; /* No border */
-    border-radius: 4px; /* Slightly rounded corners */
-    padding: 8px 12px; /* Padding inside button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    background-color: #00ADB5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
   .remove-favorite:hover {
-    background-color: #00FFF5; /* Light color on hover */
+    background-color: #00FFF5;
   }
   
