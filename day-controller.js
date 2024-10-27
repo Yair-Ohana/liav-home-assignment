@@ -1,4 +1,5 @@
 import { displaySingleMovie } from "./single-movie-utils.js";
+
 const popularMoviesDayUrl =
   "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
 
@@ -25,7 +26,7 @@ fetch(popularMoviesDayUrl, options)
       movieElement.addEventListener("click", () => {
         displaySingleMovie(movie.id);
       });
-      movieList.appendChild(movieElement);
+      movieList?.appendChild(movieElement);
     })
   )
   .catch((err) => console.error(err));

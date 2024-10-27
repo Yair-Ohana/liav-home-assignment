@@ -3,7 +3,7 @@ const viewSelect = document.getElementById("view-select");
 const dayMovieList = document.querySelector(".day-movie-list");
 const weekMovieList = document.querySelector(".week-movie-list");
 
-viewSelect.addEventListener("change", function () {
+viewSelect?.addEventListener("change", function () {
   if (this.value === "day") {
     dayMovieList.style.display = "flex";
     weekMovieList.style.display = "none";
@@ -12,4 +12,3 @@ viewSelect.addEventListener("change", function () {
     weekMovieList.style.display = "flex";
   }
 });
-

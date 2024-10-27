@@ -28,22 +28,21 @@ fetch(popularMoviesWeekUrl, options)
 
       const favoriteIcon = movieElement.querySelector(".favorite-icon");
       favoriteIcon.addEventListener("click", (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         addToFavorites(movie.id, movie.title, movie.poster_path);
-
-        window.location.href = "favorites.html"; 
       });
 
       movieElement.addEventListener("click", () => {
         displaySingleMovie(movie.id);
       });
-      movieList.appendChild(movieElement);
+      movieList?.appendChild(movieElement);
     })
   )
   .catch((err) => console.error(err));
 
 function addToFavorites(movieId, movieTitle, posterPath) {
-  const favoriteMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+  const favoriteMovies =
+    JSON.parse(localStorage.getItem("favoriteMovies")) || [];
 
   if (!favoriteMovies.some((favMovie) => favMovie.id == movieId)) {
     const movie = { id: movieId, title: movieTitle, poster_path: posterPath };
