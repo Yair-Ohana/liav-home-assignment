@@ -25,7 +25,7 @@ searchForm?.addEventListener("submit", async (ev) => {
 
     const moviesLists = data.results;
     searchOutput.innerHTML = "";
-    moviesLists.forEach((movie) => {
+    moviesLists?.forEach((movie) => {
       const movieCard = document.createElement("div");
       movieCard.classList.add("movie-card");
 
