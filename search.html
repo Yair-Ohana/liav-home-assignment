@@ -6,7 +6,7 @@
     <title>TMDB Project</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="search-page.css">
-</head>
+  </head>
   <body>
     <h1>TMDB</h1>
 
@@ -26,9 +26,7 @@
       </div>
     </nav>
 
-    <!-- Content area for dynamic loading -->
     <div id="content">
-      <!-- Search Form added here -->
       <form id="search-form">
         <input name="search-bar" type="text" id="search-input" placeholder="Enter movie name..." />
         <button type="submit">Search</button>
@@ -36,16 +34,18 @@
       <div id="search-results"></div>
     </div>
 
-    <div class="search-output"></div>
+    <div class="search-output"></div> <!-- Div for displaying search results -->
 
-    <div class="day-movie-list"></div>
-    <div class="week-movie-list"></div>
+    <!-- <div class="day-movie-list"></div>
+    <div class="week-movie-list"></div> -->
 
     <script type="module">
       import "./day-controller.js";
       import "./week-controller.js";
       import "./dropdown-functionality.js";
       import "./search-controller.js";
+      import "./single-movie-utils.js";
+
     </script>
   </body>
 </html>
