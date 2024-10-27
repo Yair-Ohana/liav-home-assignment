@@ -101,7 +101,6 @@ h1::after {
   height: 100%;
 }
 
-/* Class for day and week views */
 .day-view {
   background-color: #37aa9c;
 }
@@ -110,7 +109,6 @@ h1::after {
   background-color: red;
 }
 
-/* Styles for the select element */
 #view-select, #back-button {
   background-color: #333f44;
   color: #94f3e4;
@@ -236,78 +234,78 @@ h3 {
 }
 
 .search-by-id {
-  display: flex; /* Use flexbox to align items horizontally */
-  gap: 10px; /* Space between the input and button */
+  display: flex; 
+  gap: 10px; 
 }
 
 #movie-id-input {
-  background-color: #333f44; /* Match the background color */
-  color: #94f3e4; /* Match the text color */
-  border: 2px solid #37aa9c; /* Match the border color */
-  padding: 10px; /* Padding for better appearance */
-  font-size: 16px; /* Match the font size */
-  border-radius: 5px; /* Match the border radius */
-  outline: none; /* Remove default outline */
-  transition: border-color 0.3s ease; /* Smooth transition for focus effects */
+  background-color: #333f44; 
+  color: #94f3e4; 
+  border: 2px solid #37aa9c; 
+  padding: 10px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  outline: none; 
+  transition: border-color 0.3s ease; 
 }
 
 #movie-id-input::placeholder {
-  color: #94f3e4; /* Placeholder text color */
+  color: #94f3e4; 
 }
 
 #movie-id-input:focus {
-  border-color: #37aa9c; /* Change border color on focus */
+  border-color: #37aa9c; 
 }
 
 #search-by-id-btn {
-  background-color: #333f44; /* Match the background color */
-  color: #94f3e4; /* Match the text color */
-  border: 2px solid #37aa9c; /* Match the border color */
-  padding: 10px 20px; /* Add padding for better button appearance */
-  font-size: 16px; /* Match the font size */
-  border-radius: 5px; /* Match the border radius */
-  cursor: pointer; /* Change cursor on hover */
-  outline: none; /* Remove default outline */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  background-color: #333f44; 
+  color: #94f3e4; 
+  border: 2px solid #37aa9c; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  outline: none; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 #search-by-id-btn:hover {
-  background-color: #37aa9c; /* Change background color on hover */
-  color: #333f44; /* Change text color on hover */
+  background-color: #37aa9c; 
+  color: #333f44; 
 }
 
 #search-by-id-btn:focus {
-  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5); /* Focus effect */
+  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5); 
 }
 
 #search-by-id-btn:active {
-  transform: scale(0.98); /* Button press effect */
+  transform: scale(0.98); 
 }
 
 
 #search-movie-btn {
-  background-color: #333f44; /* Match the background color */
-  color: #94f3e4; /* Match the text color */
-  border: 2px solid #37aa9c; /* Match the border color */
-  padding: 10px 20px; /* Add padding for better button appearance */
-  font-size: 16px; /* Match the font size */
-  border-radius: 5px; /* Match the border radius */
-  cursor: pointer; /* Change cursor on hover */
-  outline: none; /* Remove default outline */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  background-color: #333f44; 
+  color: #94f3e4; 
+  border: 2px solid #37aa9c; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  outline: none; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 #search-movie-btn:hover {
-  background-color: #37aa9c; /* Change background color on hover */
-  color: #333f44; /* Change text color on hover */
+  background-color: #37aa9c; 
+  color: #333f44; 
 }
 
 #search-movie-btn:focus {
-  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5); /* Focus effect */
+  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5);
 }
 
 #search-movie-btn:active {
-  transform: scale(0.98); /* Button press effect */
+  transform: scale(0.98); 
 }
 
 #suggestions-list {
@@ -317,9 +315,9 @@ h3 {
   border: 1px solid #333f44;
   background-color: #333f44;
   color: #94f3e4;
-  max-height: 200px; /* Set max height for overflow */
-  overflow-y: auto; /* Enable vertical scrolling */
-  display: none; /* Initially hidden */
+  max-height: 200px; 
+  overflow-y: auto; 
+  display: none; 
 }
 
 #suggestions-list li {
@@ -331,7 +329,6 @@ h3 {
   background-color: #37aa9c;
 }
 
-/* סגנון לתפריט הניווט */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -341,7 +338,6 @@ h3 {
   animation: slideIn 1s ease-out;
 }
 
-/* סגנון לקישורי הניווט */
 .nav-links {
   list-style: none;
   display: flex;
@@ -350,7 +346,6 @@ h3 {
   padding: 0;
 }
 
-/* סגנון לקישורים עצמם */
 .nav-links li a {
   color: #94F3E4;
   text-decoration: none;
@@ -363,19 +358,16 @@ h3 {
   transform: translateY(-5px);
 }
 
-/* סגנון עבור ה-select-view (תפריט הנפילה) */
 .select-view {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* סגנון לטקסט "Select view:" */
 .select-view p {
   color: #94F3E4;
   margin-right: 0.5rem;
 }
 
-/* סגנון ל-select */
 #view-select {
   padding: 0.5rem;
   font-size: 1rem;
@@ -387,7 +379,6 @@ h3 {
   transition: opacity 0.3s ease;
 }
 
-/* אנימציה עבור ה-navbar */
 @keyframes slideIn {
   from {
     transform: translateY(-100%);
@@ -399,7 +390,6 @@ h3 {
   }
 }
 
-/* Responsive design for tablet and smaller devices */
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -419,11 +409,11 @@ h3 {
   }
 
   #view-select {
-    width: 100%; /* Ensure full width on smaller screens */
+    width: 100%; 
   }
 }
 
-/* Responsive for very small phones */
+
 @media (max-width: 480px) {
   .nav-links li a {
     font-size: 0.9rem;

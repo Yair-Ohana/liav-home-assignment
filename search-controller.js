@@ -1,5 +1,3 @@
-import { displaySingleMovie } from "./single-movie-utils.js";
-
 const searchForm = document.querySelector("#search-form");
 const searchOutput = document.querySelector(`.search-output`);
 
@@ -22,10 +20,10 @@ searchForm.addEventListener("submit", async (ev) => {
     const data = await response.json();
     
     const moviesLists = data.results;
-    searchOutput.innerHTML = ''; // Clear previous results
+    searchOutput.innerHTML = ''; 
     moviesLists.forEach(movie => {
       const movieCard = document.createElement("div");
-      movieCard.classList.add("movie-card"); // Add the movie-card class
+      movieCard.classList.add("movie-card"); 
 
       const image = document.createElement("img");
       image.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -34,9 +32,9 @@ searchForm.addEventListener("submit", async (ev) => {
       movieTitleElemnt.classList.add("card-title");
       movieTitleElemnt.textContent = `${movie.original_title}`;
 
-      movieCard.appendChild(image); // Add the image to the movieCard
-      movieCard.appendChild(movieTitleElemnt); // Add the title to the movieCard
-      searchOutput.appendChild(movieCard); // Add the movieCard to the searchOutput
+      movieCard.appendChild(image); 
+      movieCard.appendChild(movieTitleElemnt); 
+      searchOutput.appendChild(movieCard); 
     });
   } catch (err) {
     console.error(err);

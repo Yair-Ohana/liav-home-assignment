@@ -13,6 +13,7 @@ const options = {
 };
 
 const movieList = document.getElementsByClassName("week-movie-list")[0];
+
 fetch(popularMoviesWeekUrl, options)
   .then((response) => response.json())
   .then((response) =>
@@ -22,7 +23,17 @@ fetch(popularMoviesWeekUrl, options)
       movieElement.innerHTML = `
       <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
       <h2>${movie.title}</h2>
+      <span class="favorite-icon" data-id="${movie.id}">❤️</span>
     `;
+
+      const favoriteIcon = movieElement.querySelector(".favorite-icon");
+      favoriteIcon.addEventListener("click", (e) => {
+        e.stopPropagation(); 
+        addToFavorites(movie.id, movie.title, movie.poster_path);
+
+        window.location.href = "favorites.html"; 
+      });
+
       movieElement.addEventListener("click", () => {
         displaySingleMovie(movie.id);
       });
@@ -30,3 +41,16 @@ fetch(popularMoviesWeekUrl, options)
     })
   )
   .catch((err) => console.error(err));
+
+function addToFavorites(movieId, movieTitle, posterPath) {
+  const favoriteMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+
+  if (!favoriteMovies.some((favMovie) => favMovie.id == movieId)) {
+    const movie = { id: movieId, title: movieTitle, poster_path: posterPath };
+    favoriteMovies.push(movie);
+    localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
+    alert(`${movieTitle} has been added to favorites!`);
+  } else {
+    alert(`${movieTitle} is already in favorites.`);
+  }
+}

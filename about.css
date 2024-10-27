@@ -1,90 +1,89 @@
-/* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #222831; /* Dark background */
-    color: #ffffff; /* Light text color */
+    background-color: #222831;
+    color: #ffffff; 
   }
   
   h1 {
     text-align: center;
     margin: 20px 0;
-    color: #00ADB5; /* Bright accent color for headings */
+    color: #00ADB5; 
   }
   
   .about-section {
     padding: 20px;
     margin: 20px;
-    background-color: #393E46; /* Slightly lighter dark background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #393E46;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   }
   
   h2 {
-    color: #00FFF5; /* Light accent color for subheadings */
+    color: #00FFF5; 
   }
   
   h3 {
-    color: #00ADB5; /* Consistent heading color */
-    margin-top: 15px; /* Space above subheadings */
+    color: #00ADB5; 
+    margin-top: 15px;
   }
   
   p {
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
   }
   
   ul {
-    list-style-type: disc; /* Bulleted list */
-    padding-left: 20px; /* Indent the list */
+    list-style-type: disc;
+    padding-left: 20px; 
   }
   
   li {
-    margin: 10px 0; /* Space between list items */
+    margin: 10px 0; 
   }
   
   .nav-bar {
-    background-color: #393E46; /* Dark background for navigation */
+    background-color: #393E46;
     padding: 10px 0;
   }
   
   .nav-links {
-    list-style-type: none; /* Remove default list style */
-    display: flex; /* Horizontal layout */
-    justify-content: center; /* Center items */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    list-style-type: none; 
+    display: flex; 
+    justify-content: center;
+    margin: 0; 
+    padding: 0;
   }
   
   .nav-links li {
-    margin: 0 15px; /* Space between links */
+    margin: 0 15px;
   }
   
   .nav-links a {
-    text-decoration: none; /* Remove underline */
-    color: #00FFF5; /* Link color */
-    transition: color 0.3s; /* Smooth transition on hover */
+    text-decoration: none;
+    color: #00FFF5; 
+    transition: color 0.3s;
   }
   
   .nav-links a:hover {
-    color: #00ADB5; /* Darken link color on hover */
+    color: #00ADB5; 
   }
   
   .select-view {
-    text-align: center; /* Center select view section */
-    margin-top: 10px; /* Space above select view */
+    text-align: center;
+    margin-top: 10px; 
   }
   
   select {
-    padding: 5px; /* Padding for select box */
-    border-radius: 4px; /* Rounded corners for select */
-    border: none; /* Remove default border */
-    background-color: #00ADB5; /* Background for select */
-    color: #ffffff; /* Text color in select */
+    padding: 5px; 
+    border-radius: 4px; 
+    border: none; 
+    background-color: #00ADB5;
+    color: #ffffff; 
   }
   
   select option {
-    background-color: #222831; /* Background color for options */
-    color: #ffffff; /* Text color for options */
+    background-color: #222831;
+    color: #ffffff; 
   }
   

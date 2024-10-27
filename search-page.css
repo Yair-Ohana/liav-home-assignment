@@ -1,3 +1,6 @@
+.select-view {
+    display: none;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #222831;
@@ -41,34 +44,34 @@ body {
     margin: 20px;
 }
 
-/* Styling for the search output container */
+
 .search-output {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 15px; /* Space between grid items */
-    overflow-y: auto; /* Allow vertical scrolling */
-    max-height: 400px; /* Set a max height for the output */
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 15px; 
+    overflow-y: auto; 
+    max-height: 400px; 
     margin-top: 20px; 
     padding: 15px;
     background-color: #393E46;
     border-radius: 8px;
 }
 
-/* Individual movie cards */
+
 .movie-card {
     background-color: #222831;
     border-radius: 5px;
     padding: 10px;
-    text-align: center; /* Center-align text inside the movie card */
+    text-align: center; 
     transition: transform 0.3s;
 }
 
 .movie-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05); 
 }
 
-/* Movie images */
+
 .movie-card img {
-    max-width: 100%; /* Responsive image */
-    border-radius: 5px; /* Rounded corners */
+    max-width: 100%;
+    border-radius: 5px;
 }

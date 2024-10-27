@@ -14,14 +14,12 @@ export function displaySingleMovie(movieId) {
   const singleMovieElement = document.createElement("div");
   singleMovieElement.classList.add("single-movie");
 
-  // Fetch both movie details and credits
   Promise.all([
     fetch(singleMovieUrl, options),
     fetch(creditsUrl, options)
   ])
     .then(responses => Promise.all(responses.map(response => response.json())))
     .then(([movieDetails, credits]) => {
-      // Get only the first 5 actors
       const mainCast = credits.cast.slice(0, 5);
       
       singleMovieElement.innerHTML = `
@@ -67,7 +65,6 @@ export function displaySingleMovie(movieId) {
       
       document.body.appendChild(singleMovieElement);
 
-      // Add event listener to back button
       document.getElementById("back-button").addEventListener("click", () => {
         location.reload();
       });
