@@ -1,0 +1,78 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222831; /* Dark background color */
+    color: #00FFF5; /* Light text color */
+  }
+  
+  .nav-bar {
+    background-color: #393E46; /* Dark background for the navigation */
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline; /* Display links inline */
+    margin-right: 20px; /* Space between links */
+  }
+  
+  .nav-links a {
+    color: #00ADB5; /* Light teal text for links */
+    text-decoration: none; /* No underline */
+  }
+  
+  h1 {
+    text-align: center; /* Center the header */
+    margin-top: 20px; /* Margin above the header */
+    color: #00FFF5; /* Light text color for header */
+  }
+  
+  /* Favorites list grid */
+  .favorites-list {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+  }
+  
+  .movie-item {
+    background-color: #393E46; /* Darker background for movie items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center text inside movie items */
+  }
+  
+  .movie-item img {
+    width: 100%; /* Image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded top corners for images */
+  }
+  
+  .movie-item h2 {
+    font-size: 1.2em; /* Slightly larger title */
+    margin: 10px 0; /* Margin above and below title */
+    color: #00FFF5; /* Light text color for movie title */
+  }
+  
+  .remove-favorite {
+    background-color: #00ADB5; /* Teal background for remove button */
+    color: white; /* White text for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 8px 12px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .remove-favorite:hover {
+    background-color: #00FFF5; /* Light color on hover */
+  }
+  
