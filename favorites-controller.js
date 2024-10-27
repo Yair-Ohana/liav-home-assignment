@@ -3,10 +3,14 @@ import { displaySingleMovie } from "./single-movie-utils.js";
 const favoritesList = document.getElementById("favorites-list");
 const favoriteMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
 
-favoritesList.innerHTML = "";
+if (favoritesList) {
+  favoritesList.innerHTML = "";
+}
 
-if (!favoriteMovies || favoriteMovies.length === 0) {
-  favoritesList.innerHTML = "<p>No favorite movies yet.</p>";
+if (favoriteMovies.length === 0) {
+  if (favoritesList) {
+    favoritesList.innerHTML = "<p>No favorite movies yet.</p>";
+  }
 }
 
 favoriteMovies.forEach((movie) => {
@@ -28,7 +32,7 @@ favoriteMovies.forEach((movie) => {
     displaySingleMovie(movie.id);
   });
 
-  favoritesList.appendChild(movieElement);
+  favoritesList?.appendChild(movieElement);
 });
 
 function removeFromFavorites(movieId, movieTitle) {
@@ -49,7 +53,9 @@ function removeFromFavorites(movieId, movieTitle) {
 
   // Update the favorites list if it's now empty
   if (updatedFavorites.length === 0) {
-    favoritesList.innerHTML = "<p>No favorite movies yet.</p>";
+    if (favoritesList) {
+      favoritesList.innerHTML = "<p>No favorite movies yet.</p>";
+    }
   }
 
   alert(`Removed ${movieTitle} from favorites`);
