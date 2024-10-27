@@ -1,3 +1,5 @@
+import { displaySingleMovie } from "./single-movie-utils.js";
+
 const searchForm = document.querySelector("#search-form");
 const searchOutput = document.querySelector(`.search-output`);
 
@@ -32,13 +34,17 @@ searchForm?.addEventListener("submit", async (ev) => {
       const image = document.createElement("img");
       image.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-      const movieTitleElemnt = document.createElement("h1");
-      movieTitleElemnt.classList.add("card-title");
-      movieTitleElemnt.textContent = `${movie.original_title}`;
+      const movieTitleElement = document.createElement("h1");
+      movieTitleElement.classList.add("card-title");
+      movieTitleElement.textContent = `${movie.original_title}`;
 
       movieCard.appendChild(image);
-      movieCard.appendChild(movieTitleElemnt);
+      movieCard.appendChild(movieTitleElement);
       searchOutput.appendChild(movieCard);
+
+      movieCard.addEventListener("click", () => {
+        displaySingleMovie(movie.id);
+      });
     });
   } catch (err) {
     console.error(err);

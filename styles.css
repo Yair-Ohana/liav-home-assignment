@@ -109,11 +109,13 @@ h1::after {
   background-color: red;
 }
 
-#view-select, #back-button {
+#view-select, #back-button,
+#search-by-id-btn,
+#search-movie-btn {
   background-color: #333f44;
   color: #94f3e4;
   border: 2px solid #37aa9c;
-  padding: 10px;
+  padding: 10px 20px; 
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -121,31 +123,34 @@ h1::after {
   transition: all 0.3s ease;
 }
 
-#view-select:hover, #back-button:hover {
+#view-select:hover, #back-button:hover,
+#search-by-id-btn:hover,
+#search-movie-btn:hover {
   background-color: #37aa9c;
   color: #333f44;
 }
 
-#view-select:focus, #back-button:focus {
+#view-select:focus, #back-button:focus,
+#search-by-id-btn:focus,
+#search-movie-btn:focus {
   box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5);
 }
 
-#back-button:active {
+#back-button:active,
+#search-by-id-btn:active,
+#search-movie-btn:active {
   transform: scale(0.98);
 }
 
-#view-select option {
+#view-select option,
+#search-by-id-btn, 
+#search-movie-btn {
   background-color: #333f44;
   color: #94f3e4;
-  padding: 10px;
 }
 
 #view-select option:hover,
-#view-select option:focus {
-  background-color: #37aa9c;
-  color: #333f44;
-}
-
+#view-select option:focus,
 #view-select option:checked {
   background-color: #37aa9c;
   color: #333f44;
@@ -257,57 +262,6 @@ h3 {
   border-color: #37aa9c; 
 }
 
-#search-by-id-btn {
-  background-color: #333f44; 
-  color: #94f3e4; 
-  border: 2px solid #37aa9c; 
-  padding: 10px 20px; 
-  font-size: 16px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  outline: none; 
-  transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-#search-by-id-btn:hover {
-  background-color: #37aa9c; 
-  color: #333f44; 
-}
-
-#search-by-id-btn:focus {
-  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5); 
-}
-
-#search-by-id-btn:active {
-  transform: scale(0.98); 
-}
-
-
-#search-movie-btn {
-  background-color: #333f44; 
-  color: #94f3e4; 
-  border: 2px solid #37aa9c; 
-  padding: 10px 20px; 
-  font-size: 16px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  outline: none; 
-  transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-#search-movie-btn:hover {
-  background-color: #37aa9c; 
-  color: #333f44; 
-}
-
-#search-movie-btn:focus {
-  box-shadow: 0 0 0 3px rgba(55, 170, 156, 0.5);
-}
-
-#search-movie-btn:active {
-  transform: scale(0.98); 
-}
-
 #suggestions-list {
   list-style: none;
   padding: 0;
@@ -413,26 +367,9 @@ h3 {
   }
 }
 
-
 @media (max-width: 480px) {
   .nav-links li a {
     font-size: 0.9rem;
-  }
-
-  .nav-bar {
-    padding: 0.5rem;
-  }
-
-  .nav-links {
-    gap: 0.8rem;
-  }
-
-  #view-select {
-    font-size: 0.9rem;
-  }
+} 
 }
-.favorite-icon img {
-  width: 24px; 
-  height: auto; 
-  cursor: pointer; 
-}
+

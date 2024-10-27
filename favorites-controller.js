@@ -43,7 +43,6 @@ function removeFromFavorites(movieId, movieTitle) {
   );
   localStorage.setItem("favoriteMovies", JSON.stringify(updatedFavorites));
 
-  // Remove the movie element from the DOM
   const movieElement = document
     .querySelector(`.movie-item .remove-favorite[data-id="${movieId}"]`)
     .closest(".movie-item");
@@ -51,7 +50,6 @@ function removeFromFavorites(movieId, movieTitle) {
     movieElement.remove();
   }
 
-  // Update the favorites list if it's now empty
   if (updatedFavorites.length === 0) {
     if (favoritesList) {
       favoritesList.innerHTML = "<p>No favorite movies yet.</p>";
