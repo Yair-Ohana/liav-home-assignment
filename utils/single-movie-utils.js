@@ -1,10 +1,4 @@
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNDQyOTU0NTdiMDFjNmJjZTYxZWU4MjA4M2ZhMGYzMyIsIm5iZiI6MTcyOTQyMTM0MC4yNjY0NzYsInN1YiI6IjY3MTFlNzI2OThmNmE3NThjZDU0OGVmZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._5_tA0D-bSlSEVpHW6vOkO1NBzoUvuqboA-11boXpI4",
-  },
-};
+import { options } from "../../constants.js";
 
 export function displaySingleMovie(movieId) {
   const singleMovieUrl = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;
@@ -14,55 +8,73 @@ export function displaySingleMovie(movieId) {
   const singleMovieElement = document.createElement("div");
   singleMovieElement.classList.add("single-movie");
 
-  Promise.all([
-    fetch(singleMovieUrl, options),
-    fetch(creditsUrl, options)
-  ])
-    .then(responses => Promise.all(responses.map(response => response.json())))
+  Promise.all([fetch(singleMovieUrl, options), fetch(creditsUrl, options)])
+    .then((responses) =>
+      Promise.all(responses.map((response) => response.json()))
+    )
     .then(([movieDetails, credits]) => {
       const mainCast = credits.cast.slice(0, 5);
-      
+
       singleMovieElement.innerHTML = `
         <h1>${movieDetails.title}</h1>
         <div class="movie-content">
           <div class="movie-poster">
-            <img src="https://image.tmdb.org/t/p/w500${movieDetails.poster_path}" alt="${movieDetails.title}" />
+            <img src="https://image.tmdb.org/t/p/w500${
+              movieDetails.poster_path
+            }" alt="${movieDetails.title}" />
           </div>
           <div class="movie-info">
             <p><strong>Release Date:</strong> ${movieDetails.release_date}</p>
             <p><strong>Runtime:</strong> ${movieDetails.runtime} minutes</p>
-            <p><strong>Rating:</strong> ${movieDetails.vote_average.toFixed(1)}/10 (${movieDetails.vote_count} votes)</p>
-            <p><strong>Genres:</strong> ${movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+            <p><strong>Rating:</strong> ${movieDetails.vote_average.toFixed(
+              1
+            )}/10 (${movieDetails.vote_count} votes)</p>
+            <p><strong>Genres:</strong> ${movieDetails.genres
+              .map((genre) => genre.name)
+              .join(", ")}</p>
             <p><strong>Language:</strong> ${movieDetails.original_language.toUpperCase()}</p>
             <div class="cast-section">
               <h3>Main Cast:</h3>
               <div class="cast-list">
-                ${mainCast.map(actor => `
+                ${mainCast
+                  .map(
+                    (actor) => `
                   <div class="cast-member">
-                    ${actor.profile_path 
-                      ? `<img src="https://image.tmdb.org/t/p/w185${actor.profile_path}" alt="${actor.name}" />`
-                      : `<div class="no-photo">No Photo</div>`
+                    ${
+                      actor.profile_path
+                        ? `<img src="https://image.tmdb.org/t/p/w185${actor.profile_path}" alt="${actor.name}" />`
+                        : `<div class="no-photo">No Photo</div>`
                     }
                     <p class="actor-name">${actor.name}</p>
-                    <p class="character-name">as ${actor.character}</p>
+                    <p class="character-name" style="word-break: break-word;">${
+                      actor.character
+                    }</p>
                   </div>
-                `).join('')}
+                `
+                  )
+                  .join("")}
               </div>
             </div>
             <div class="overview-section">
               <h3>Overview:</h3>
-              <p>${movieDetails.overview}</p>
+              <p style="max-width: 100%; word-wrap: break-word;">${
+                movieDetails.overview
+              }</p>
             </div>
-            ${movieDetails.homepage ? `
-              <p><strong>Official Website:</strong> 
-                <a href="${movieDetails.homepage}" target="_blank">Visit Website</a>
+            ${
+              movieDetails.homepage
+                ? `
+              <p style="word-break: break-all;"><strong>Official Website:</strong> 
+                <a href="${movieDetails.homepage}" target="_blank">${movieDetails.homepage}</a>
               </p>
-            ` : ''}
+            `
+                : ""
+            }
             <button id="back-button">Back to List</button>
           </div>
         </div>
       `;
-      
+
       document.body.appendChild(singleMovieElement);
 
       document.getElementById("back-button").addEventListener("click", () => {
@@ -79,20 +91,9 @@ export function displaySingleMovie(movieId) {
         </div>
       `;
       document.body.appendChild(singleMovieElement);
-      
+
       document.getElementById("back-button").addEventListener("click", () => {
         location.reload();
       });
     });
 }
-
-
-
-
-
-
-
-
-
-
-
