@@ -1,17 +1,9 @@
 import { addToFavorites } from "../utils/utils.js";
 import { displaySingleMovie } from "../utils/single-movie-utils.js";
+import { options } from "../../constants.js";
 
 const popularMoviesDayUrl =
   "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
-
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNDQyOTU0NTdiMDFjNmJjZTYxZWU4MjA4M2ZhMGYzMyIsIm5iZiI6MTcyOTQyMTM0MC4yNjY0NzYsInN1YiI6IjY3MTFlNzI2OThmNmE3NThjZDU0OGVmZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._5_tA0D-bSlSEVpHW6vOkO1NBzoUvuqboA-11boXpI4",
-  },
-};
 
 const movieList = document.getElementsByClassName("day-movie-list")[0];
 fetch(popularMoviesDayUrl, options)

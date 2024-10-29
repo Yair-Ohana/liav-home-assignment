@@ -1,4 +1,5 @@
 import { displaySingleMovie } from "../utils/single-movie-utils.js";
+import { options } from "../../constants.js";
 
 const searchForm = document.querySelector("#search-form");
 const searchOutput = document.querySelector(`.search-output`);
@@ -9,14 +10,6 @@ searchForm?.addEventListener("submit", async (ev) => {
   const formData = new FormData(searchForm);
   const userInput = formData.get("search-bar");
 
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNDQyOTU0NTdiMDFjNmJjZTYxZWU4MjA4M2ZhMGYzMyIsIm5iZiI6MTcyOTY2NzU0MC43OTg5OTEsInN1YiI6IjY3MTFlNzI2OThmNmE3NThjZDU0OGVmZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aOZpQNoVCITZD0A7guGGPkmv2jnuC5oj_D2iWwhNHXo",
-    },
-  };
 
   try {
     const response = await fetch(
