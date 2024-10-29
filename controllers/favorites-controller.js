@@ -15,11 +15,13 @@ if (favoriteMovies.length === 0) {
 
 favoriteMovies.forEach((movie) => {
   const movieElement = document.createElement("div");
-  movieElement.classList.add("movie-item");
+  movieElement.classList.add("favorite-movie-item");
   movieElement.innerHTML = `
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
-        <h2>${movie.title}</h2>
-        <button class="remove-favorite" data-id="${movie.id}">🗑️ Remove from favorites</button>
+        <div class="movie-item-info">
+          <h2>${movie.title}</h2>
+          <button class="remove-favorite" data-id="${movie.id}">🗑️ Remove from favorites</button>
+        </div>
       `;
 
   const removeButton = movieElement.querySelector(".remove-favorite");
