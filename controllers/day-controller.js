@@ -1,8 +1,8 @@
-import { addToFavorites } from "./utils.js";
-import { displaySingleMovie } from "./single-movie-utils.js";
+import { addToFavorites } from "../utils/utils.js";
+import { displaySingleMovie } from "../utils/single-movie-utils.js";
 
-const popularMoviesWeekUrl =
-  "https://api.themoviedb.org/3/trending/movie/week?language=en-US";
+const popularMoviesDayUrl =
+  "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
 
 const options = {
   method: "GET",
@@ -13,9 +13,8 @@ const options = {
   },
 };
 
-const movieList = document.getElementsByClassName("week-movie-list")[0];
-
-fetch(popularMoviesWeekUrl, options)
+const movieList = document.getElementsByClassName("day-movie-list")[0];
+fetch(popularMoviesDayUrl, options)
   .then((response) => response.json())
   .then((response) =>
     response?.results?.forEach((movie) => {
@@ -26,13 +25,11 @@ fetch(popularMoviesWeekUrl, options)
       <h2>${movie.title}</h2>
       <span class="favorite-icon" data-id="${movie.id}">❤️</span>
     `;
-
       const favoriteIcon = movieElement.querySelector(".favorite-icon");
       favoriteIcon.addEventListener("click", (e) => {
         e.stopPropagation();
         addToFavorites(movie.id, movie.title, movie.poster_path);
       });
-
       movieElement.addEventListener("click", () => {
         displaySingleMovie(movie.id);
       });

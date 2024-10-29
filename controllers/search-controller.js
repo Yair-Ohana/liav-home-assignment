@@ -1,4 +1,4 @@
-import { displaySingleMovie } from "./single-movie-utils.js";
+import { displaySingleMovie } from "../utils/single-movie-utils.js";
 
 const searchForm = document.querySelector("#search-form");
 const searchOutput = document.querySelector(`.search-output`);

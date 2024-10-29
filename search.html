@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TMDB Project</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="search-page.css">
+    <link rel="stylesheet" href="search-page.css" />
   </head>
   <body>
     <h1>TMDB</h1>
@@ -28,21 +28,25 @@
 
     <div id="content">
       <form id="search-form">
-        <input name="search-bar" type="text" id="search-input" placeholder="Enter movie name..." />
+        <input
+          name="search-bar"
+          type="text"
+          id="search-input"
+          placeholder="Enter movie name..."
+        />
         <button type="submit">Search</button>
       </form>
       <div id="search-results"></div>
     </div>
 
-    <div class="search-output"></div> 
+    <div class="search-output"></div>
 
     <script type="module">
-      import "./day-controller.js";
-      import "./week-controller.js";
-      import "./dropdown-functionality.js";
-      import "./search-controller.js";
-      import "./single-movie-utils.js";
-
+      import "./controllers/day-controller.js";
+      import "./controllers/week-controller.js";
+      import "./utils/dropdown-functionality.js";
+      import "./controllers/search-controller.js";
+      import "./utils/single-movie-utils.js";
     </script>
   </body>
 </html>

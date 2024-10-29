@@ -1,4 +1,4 @@
-import { displaySingleMovie } from "./single-movie-utils.js";
+import { displaySingleMovie } from "../utils/single-movie-utils.js";
 
 const favoritesList = document.getElementById("favorites-list");
 const favoriteMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
