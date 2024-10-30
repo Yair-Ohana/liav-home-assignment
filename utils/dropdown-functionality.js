@@ -1,5 +1,4 @@
 const viewSelect = document.getElementById("view-select");
-
 const dayMovieList = document.querySelector(".day-movie-list");
 const weekMovieList = document.querySelector(".week-movie-list");
 
