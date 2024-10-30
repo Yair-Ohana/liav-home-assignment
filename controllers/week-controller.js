@@ -13,9 +13,9 @@ fetch(popularMoviesWeekUrl, options)
       const movieElement = document.createElement("div");
       movieElement.classList.add("movie-item");
       movieElement.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
-      <h2>${movie.title}</h2>
-      <span class="favorite-icon" data-id="${movie.id}">❤️</span>
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+      <h2 style="text-align: center">${movie.title}</h2>
+      <span class="favorite-icon" data-id="${movie.id}" style="text-align: center; display: block">❤️</span>
     `;
 
       const favoriteIcon = movieElement.querySelector(".favorite-icon");

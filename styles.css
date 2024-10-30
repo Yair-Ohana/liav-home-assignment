@@ -82,10 +82,17 @@ h1::after {
   display: none;
 }
 
-.movie-item {
+.movie-item-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   border: 1px solid #333f44;
   margin: 0px;
@@ -93,12 +100,34 @@ h1::after {
   background-color: #333f44;
   color: #94f3e4;
   width: 200px;
+  padding-bottom: 10px;
+}
+
+.favorite-movie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333f44;
+  margin: 0px;
+  padding: 0px;
+  background-color: #333f44;
+  color: #94f3e4;
+  width: 200px;
+  padding-bottom: 10px;
 }
 
 .movie-item img {
   width: 100%;
   max-width: 200px;
-  height: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+
+.favorite-movie-item img {
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
   cursor: pointer;
 }
 
@@ -372,13 +401,6 @@ h2 {
   .movie-item {
     width: 100%;
     max-width: none;
-  }
-
-  .day-movie-list,
-  .week-movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
   }
 
   .movie-content {
